@@ -11,7 +11,7 @@ class Player {
         this.maxLives = 10;
         this.image = document.getElementById('player');
         this.frameX = 0;
-        this.shootSound = new Audio('assets/audio/laser.MP3');
+        this.shootSound = new Audio('assets/audio/laser3.MP3');
         this.shootSound.volume = 0.5; // Adjust the volume as needed
 
     }
