@@ -73,8 +73,6 @@ body {
 }
 
 #startGame:hover {
-    color: whitesmoke;
-    font-size: 30px;
     text-shadow: 0 0 10px #92f815, 0 0 20px #92f815, 0 0 30px #92f815,
         0 0 40px #92f815, 0 0 50px #92f815, 0 0 60px #92f815,
         0 0 70px #92f815;
