@@ -17,7 +17,7 @@ class Player {
     }
     draw(context) {
         // handle sprite frames
-        if(this.game.keys.indexOf('1') > -1){
+        if (this.game.keys.indexOf('1') > -1) {
             this.frameX = 1;
         } else {
             this.frameX = 0;
@@ -31,13 +31,10 @@ class Player {
         if (this.game.keys.indexOf('ArrowRight') > -1) this.x += this.speed;
         // horizontal boundaries 
         if (this.x < -this.width * 0.5) this.x = -this.width * 0.5;
-        else if (this.x > this.game.width - this.width * 0.5) this.x = this.game.width - 
-        this.width * 0.5;
+        else if (this.x > this.game.width - this.width * 0.5) this.x = this.game.width -
+            this.width * 0.5;
     }
-    /*shoot() {
-        const projectile = this.game.getProjectile();
-        if (projectile) projectile.start(this.x + this.width * 0.5, this.y);
-    }*/
+
     shoot() {
         const projectile = this.game.getProjectile();
         if (projectile) {
@@ -45,7 +42,7 @@ class Player {
             this.shootSound.play();
         }
     }
-    
+
     restart() {
         this.x = this.game.width * 0.5 - this.width * 0.5;
         this.y = this.game.height - this.height;

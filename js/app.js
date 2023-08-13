@@ -1,8 +1,15 @@
+//sound effects for each wave
+const waveSounds = [
+    'assets/audio/SHOW ME WHAT YOU GOT - AUDIO FROM JAYUZUMI.COM.mp3',
+    'assets/audio/I THOUGHT YOU WERE DEAD - AUDIO FROM JAYUZUMI.COM.mp3',
+    'assets/audio/WUBALUBADUBDUB.mp3'
+];
+
 
 //display popup window instructions 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
     setTimeout(
-        function open(event){
+        function open(event) {
             document.querySelector('.popup').style.display = "block";
         },
         100
@@ -10,7 +17,7 @@ window.addEventListener('load', function(){
 });
 
 //close popup window 
-document.getElementById('startGame').addEventListener('click', function(){
+document.getElementById('startGame').addEventListener('click', function () {
     document.querySelector('.popup').style.display = 'none';
 });
 
@@ -21,7 +28,7 @@ function playMusic() {
     audio.volume = 0.50;
     audio.loop = true; // Set loop to true to continuously loop the music
     audio.play();
-    
+
     // Remove the click event listener to ensure the music plays only once
     play.removeEventListener('click', playMusic);
 }

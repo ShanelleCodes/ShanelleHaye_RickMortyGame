@@ -22,14 +22,15 @@ class Game {
         this.waves = [];
         this.waves.push(new Wave(this));
         this.waveCount = 1;
-
         this.spriteUpdate = false;
         this.spriteTimer = 0;
         this.spriteInterval = 150;
 
+        //game score
         this.score = 0;
         this.gameOver = false;
 
+        //game over sound
         this.gameOverMusic = new Audio('assets/audio/this-is-a-bunch-of-bull-crap.mp3');
         this.isGameOverMusicPlaying = false; // Add a flag to track if the music is playing
 
@@ -47,9 +48,6 @@ class Game {
         });
     }
 
-        
-
-    
     render(context, deltaTime) {
         //sprite timing
         if (this.spriteTimer > this.spriteInterval) {
@@ -125,17 +123,24 @@ class Game {
             context.fillText('GAME OVER!', this.width * 0.5, this.height * 0.5);
             context.font = '30px Impact';
             context.fillText('PRESS R TO RESTART!', this.width * 0.5, this.height * 0.5 + 40);
- 
+
         }
         context.restore();
     }
     newWave() {
+        this.playRandomWaveSound();
         if (Math.random() < 0.5 && this.columns * this.enemySize < this.width * 0.8) {
             this.columns++;
         } else if (this.rows * this.enemySize < this.height * 0.6) {
             this.rows++;
         }
         this.waves.push(new Wave(this));
+    }
+    playRandomWaveSound() {
+        const randomSoundIndex = Math.floor(Math.random() * waveSounds.length);
+        const waveSound = new Audio(waveSounds[randomSoundIndex]);
+        waveSound.volume = 0.6; // Adjust the volume as needed
+        waveSound.play();
     }
     restart() {
         this.player.restart();

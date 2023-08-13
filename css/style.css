@@ -1,8 +1,9 @@
-
+/*background image*/
 body {
     background: url("../assets/images/backgroundImage.png");
     background-size: cover;
-} 
+}
+
 /*game canvas*/
 #canvas1 {
     border: 5px solid whitesmoke;
@@ -74,13 +75,15 @@ body {
 #startGame:hover {
     color: whitesmoke;
     font-size: 30px;
-    text-shadow: 0 0 10px #92f815, 0 0 20px #92f815, 0 0 30px #92f815, 
-    0 0 40px #92f815, 0 0 50px #92f815, 0 0 60px #92f815, 
-    0 0 70px #92f815;
+    text-shadow: 0 0 10px #92f815, 0 0 20px #92f815, 0 0 30px #92f815,
+        0 0 40px #92f815, 0 0 50px #92f815, 0 0 60px #92f815,
+        0 0 70px #92f815;
 
 }
 
 /*game assets*/
-#cromulons, #player, #playMusic {
+#cromulons,
+#player,
+#playMusic {
     display: none;
 }

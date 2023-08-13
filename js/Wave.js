@@ -1,4 +1,4 @@
-class Wave {
+class Wave { 
     constructor(game) {
         this.game = game;
         this.width = this.game.columns * this.game.enemySize;
