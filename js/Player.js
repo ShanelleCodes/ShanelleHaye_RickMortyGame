@@ -11,6 +11,9 @@ class Player {
         this.maxLives = 10;
         this.image = document.getElementById('player');
         this.frameX = 0;
+        this.shootSound = new Audio('assets/audio/laser.MP3');
+        this.shootSound.volume = 0.5; // Adjust the volume as needed
+
     }
     draw(context) {
         // handle sprite frames
@@ -31,10 +34,18 @@ class Player {
         else if (this.x > this.game.width - this.width * 0.5) this.x = this.game.width - 
         this.width * 0.5;
     }
-    shoot() {
+    /*shoot() {
         const projectile = this.game.getProjectile();
         if (projectile) projectile.start(this.x + this.width * 0.5, this.y);
+    }*/
+    shoot() {
+        const projectile = this.game.getProjectile();
+        if (projectile) {
+            projectile.start(this.x + this.width * 0.5, this.y);
+            this.shootSound.play();
+        }
     }
+    
     restart() {
         this.x = this.game.width * 0.5 - this.width * 0.5;
         this.y = this.game.height - this.height;
