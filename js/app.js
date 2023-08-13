@@ -1,7 +1,7 @@
 //sound effects for each wave
 const waveSounds = [
     'assets/audio/SHOW ME WHAT YOU GOT - AUDIO FROM JAYUZUMI.COM.mp3',
-    'assets/audio/I THOUGHT YOU WERE DEAD - AUDIO FROM JAYUZUMI.COM.mp3',
+    'assets/audio/IM GONNA KICK YOUR ASS.mp3',
     'assets/audio/WUBALUBADUBDUB.mp3'
 ];
 

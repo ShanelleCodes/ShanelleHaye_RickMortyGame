@@ -118,7 +118,7 @@ class Game {
         if (this.gameOver) {
             context.textAlign = 'center';
             context.font = '40px Impact';
-            context.fillText('OMG So Embarrasing!', this.width * 0.5, this.height * 0.35);
+            context.fillText('OMG SO EMBARRASING!', this.width * 0.5, this.height * 0.35);
             context.font = '100px Impact';
             context.fillText('GAME OVER!', this.width * 0.5, this.height * 0.5);
             context.font = '30px Impact';
